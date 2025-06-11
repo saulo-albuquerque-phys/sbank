@@ -823,6 +823,7 @@ class PrecessingSpinTemplate(AlignedSpinTemplate):
 
         # maximize over sky position of template
         # notice that the two waveforms have the same df, that is important.
+        # the limits (and the alignment) of the frequency series are imposed by the previously defined whitening function! 
         return SBankComputeMatchSkyLoc(hp, hc, hphccorr,
                                        proposal, workspace_cache[0],
                                        workspace_cache[1],
