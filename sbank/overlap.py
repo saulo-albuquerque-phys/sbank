@@ -38,7 +38,7 @@ def SBankComputeMatch(inj, tmplt, workspace_cache, phase_maximized=True):
 def SBankComputeMatchSkyLoc(hp, hc, hphccorr, proposal, workspace_cache1,
                             workspace_cache2, phase_maximized=False):
     """
-    ADD ME
+    This guarantees that all the df involved are equal, and it also gives the limit value for the indice of the multiplication, which is given by the lower maximum frequency series.
     """
     assert (hp.deltaF == proposal.deltaF)
     assert (hc.deltaF == proposal.deltaF)
