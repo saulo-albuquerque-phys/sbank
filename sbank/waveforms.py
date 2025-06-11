@@ -824,6 +824,8 @@ class PrecessingSpinTemplate(AlignedSpinTemplate):
         # maximize over sky position of template
         # notice that the two waveforms have the same df, that is important.
         # the limits (and the alignment) of the frequency series are imposed by the previously defined whitening function! 
+        # as you can see there, the frequency series all start in f=0, and have the same df. The frequency series are zero up until flow, and they are zero after fhigh until the maximal limit. The lower maximum limit sets the boundary for the calculations of the product (min_len).
+        #the f_final is generally set by the waveform generator, or in some cases by a certain formula given by the _get_f_isco function. Nothing to be concerned.
         return SBankComputeMatchSkyLoc(hp, hc, hphccorr,
                                        proposal, workspace_cache[0],
                                        workspace_cache[1],
