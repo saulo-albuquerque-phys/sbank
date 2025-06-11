@@ -822,6 +822,7 @@ class PrecessingSpinTemplate(AlignedSpinTemplate):
         proposal = other.get_whitened_normalized(df, **kwargs)
 
         # maximize over sky position of template
+        # notice that the two waveforms have the same df, that is important.
         return SBankComputeMatchSkyLoc(hp, hc, hphccorr,
                                        proposal, workspace_cache[0],
                                        workspace_cache[1],
